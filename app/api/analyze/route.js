@@ -1,9 +1,8 @@
 import Anthropic from "@anthropic-ai/sdk";
 
-const client = new Anthropic({ apiKey: process.env.CLAUDE_API_KEY });
-
 export async function POST(req) {
   try {
+    const client = new Anthropic({ apiKey: process.env.CLAUDE_API_KEY });
     const { prompt, maxTokens = 1200 } = await req.json();
     if (!prompt || prompt.length > 30000) {
       return Response.json({ error: "Bad input" }, { status: 400 });

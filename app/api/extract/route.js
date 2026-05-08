@@ -1,9 +1,8 @@
 import Anthropic from "@anthropic-ai/sdk";
 
-const client = new Anthropic({ apiKey: process.env.CLAUDE_API_KEY });
-
 export async function POST(req) {
   try {
+    const client = new Anthropic({ apiKey: process.env.CLAUDE_API_KEY });
     const { base64, mediaType, isPDF } = await req.json();
     if (!base64 || base64.length > 14_000_000) {
       return Response.json({ error: "File too large" }, { status: 400 });
