@@ -1,0 +1,51 @@
+{
+  "name": "BillClear Medical Paperwork Decoder",
+  "short_name": "BillClear",
+  "description": "Decode medical bills, EOBs, and denial letters into a next step, call script, and dispute packet.",
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f6f8fb",
+  "theme_color": "#087a7a",
+  "categories": ["health", "medical", "productivity", "finance"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Decode a document",
+      "short_name": "Decode",
+      "description": "Paste one redacted bill, EOB, or denial.",
+      "url": "/?shortcut=decode",
+      "icons": [{ "src": "/assets/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Launch plan",
+      "short_name": "Plan",
+      "description": "Open the BillClear launch and monetization plan.",
+      "url": "/marketing-plan",
+      "icons": [{ "src": "/assets/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
